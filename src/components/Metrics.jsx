@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useState } from 'react';
 import { data } from './chart.js';
 import './globalComponents.css';
 import './Metrics.css';
@@ -16,6 +17,31 @@ export default function Metrics() {
                     options: {
                             plugins:{
                                 legend:{display:false},
+                                tooltip:{
+                                    backgroundColor:'white',
+                                    bodyColor:'black',
+                                    titleColor:'black',
+                                    bodyFontColor:'black',
+                                    labelColor:'black',
+                                    xAlign:'center',
+                                    yAlign:'top',
+                                    titleAlign:'center',
+                                    displayColors:false,
+                                    borderWidth:2,
+                                    position:'average',
+                                    padding:15,
+                                    borderColor:'darkgray',
+                                    callbacks:{
+                                        title: function(tooltipItem, data) {
+                                            return 'Day: ' + tooltipItem[0].label + 'th';
+                                        },
+                                        label: function(tooltipItem, data) {
+                                            return 'Signups: ' + tooltipItem.formattedValue;
+                                        },
+                                    },
+
+
+                                }
                             },
                             layout:{
                                 padding:{
@@ -62,13 +88,78 @@ export default function Metrics() {
         createChart();
     }, []);
 
+    const [isButton1Highlighted,setIsButton1Highlighted] = useState(false);
+    const [isButton2Highlighted,setIsButton2Highlighted] = useState(false);
+    const [isButton3Highlighted,setIsButton3Highlighted] = useState(true);
+    const [isButton4Highlighted,setIsButton4Highlighted] = useState(false);
+
+    const highlightButton1 = () => {
+        setIsButton1Highlighted(true);
+        setIsButton2Highlighted(false);
+        setIsButton3Highlighted(false);
+        setIsButton4Highlighted(false);
+    }
+
+    const highlightButton2 = () => {
+        setIsButton1Highlighted(false);
+        setIsButton2Highlighted(true);
+        setIsButton3Highlighted(false);
+        setIsButton4Highlighted(false);
+    }
+
+    const highlightButton3 = () => {
+        setIsButton1Highlighted(false);
+        setIsButton2Highlighted(false);
+        setIsButton3Highlighted(true);
+        setIsButton4Highlighted(false);
+    }
+
+    const highlightButton4 = () => {
+        setIsButton1Highlighted(false);
+        setIsButton2Highlighted(false);
+        setIsButton3Highlighted(false);
+        setIsButton4Highlighted(true);
+    }
+    
+
+
+
     return (
         <div className="container" id="metrics">
             <div id="top-metrics-section">
+                <button
+                    className={isButton1Highlighted ? 'highlightedButton' : ''}
+                    onClick={highlightButton1}
+                    id="source-btn"
+                >
+                    1h
+                </button>
+                <button
+                    className={isButton2Highlighted ? 'highlightedButton' : ''}
+                    onClick={highlightButton2}
+                    id="source-btn"
+                >
+                    2h
+                </button>
+                <button
+                    className={isButton3Highlighted ? 'highlightedButton' : ''}
+                    onClick={highlightButton3}
+                    id="source-btn"
+                >
+                    3h
+                </button>
+                <button
+                    className={isButton4Highlighted ? 'highlightedButton' : ''}
+                    onClick={highlightButton4}
+                    id="source-btn"
+                >
+                    4h
+                </button>
+
                 <h1 className="title" id="metrics-title">
                     100,000
                 </h1>
-                <img src="./public/images/usa.png" id="people-icon" alt="People Icon" />
+                <img src="./public/images/two-people.png" id="people-icon" alt="People Icon" />
             </div>
             <div className="title" id="participants-title">
                 Participants

@@ -97,6 +97,7 @@
     position: absolute;
     cursor: pointer;
     font-weight: bolder;
+    
 }
 
 
@@ -174,18 +175,64 @@
     align-items: start;
 }
 .traffic-bar p{
-    padding-bottom:5px;
+    /* padding-bottom:5px;
     padding-top:5px;
     border-radius: 5px;
-    width: fit-content;
-    background-color: rgb(255,245,194);
-}
-#traffic-tags-one{
+    background-color: rgb(255,245,194); */
     margin-top:-65%;
     position:absolute;
     font-size:17.5px;
     padding-left: 2.5%;
 }
+
+
+#traffic-tags-1{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:150px;
+}
+#traffic-tags-2{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:100px;
+}
+
+#traffic-tags-3{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:45px;
+}
+
+#traffic-tags-4{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:22.5px;
+}
+
+#traffic-tags-5{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:15px;
+}
+
+#traffic-tags-6{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    background-color: rgb(255,245,194);
+    width:8px;
+}
+
 #traffic-tags-two{
     position:absolute;
     
@@ -214,46 +261,95 @@
 
 }
 
+
 .signup-list-users{
-    display: flex;
-    flex-direction: column;
-    list-style:none;
-    align-items: start;
+    list-style: none;
+
 }
 
-.signup-bar p{
-    padding-bottom:5px;
-    padding-top:5px;
-    border-radius: 5px;
-    min-height: 20px;
-    width: 200px;
-    background-color: rgb(255,245,194);
+.signup-bar{
+    margin-top:-117px;
+    display:flex;
+    flex-direction: row;
+    
 }
+
+
+
+
+
+#signup-tags-two{
+   
+    
+    margin-left:70%;
+    margin-top: -6.5%;
+}
+
 
 #flag-img{
     height: 15px;
     width: 15px;
     margin-top:2%;
-    margin-right: 2.5%;
+    padding-right: 10%;
 
 }
 
-#signup-tags-one{
-    margin-top:-65%;
-    position:absolute;
-    font-size:17.5px;
+
+
+
+
+
+
+#signup-tags-6{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
     padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width: 250px;
+}
+#signup-tags-5{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width:200px;
+}
+#signup-tags-4{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width: 150px;
 }
 
-.signup-list-users li {
-    padding-bottom:47.5px; 
+#signup-tags-3{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width: 122.5px;
 }
 
-#signup-tags-two{
-    position:absolute;
-    
-    margin-left:70%;
-    margin-top: -65%;
+
+
+#signup-tags-1{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width: 65px;
 }
 
-
+#signup-tags-2{
+    padding-bottom:5px;
+    padding-top:5px;
+    border-radius: 5px;
+    padding-left: 2.5%;
+    background-color: rgb(255,245,194);
+    width: 75px;
+}

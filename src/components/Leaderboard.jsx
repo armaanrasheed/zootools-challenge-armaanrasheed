@@ -96,11 +96,11 @@ export default function Leaderboard(){
                 {isButton1Highlighted ? 
                     <ul className="traffic-list-users">
                         {traffic.map((user, index) => (
+                            
                             <li key={index}>
                                 <div className="traffic-bar">
-                                    <p id="traffic-tags-one">{user.source}</p>
+                                    <p id={`traffic-tags-${user.width}`}>{user.source}</p>
                                 </div>
-                                
                                 <p id="traffic-tags-two">{user.users}</p>
                             </li>
                         ))}
@@ -109,11 +109,15 @@ export default function Leaderboard(){
                         {traffic.map((user, index) => (
                             <li key={index} >
                                 <div className="traffic-bar">
-                                    <p id="traffic-tags-one">{user.city}</p>
+                                    <p id={`traffic-tags-${user.width}`}>{user.city}</p>
                                 </div>
                                 <p id="traffic-tags-two">{user.users}</p>
                             </li>
-                        ))}
+
+                        )
+                        
+                        )}
+
                     </ul>}
 
                     
@@ -121,101 +125,93 @@ export default function Leaderboard(){
 
             {/* Signup Location */}
             <div className = "small-container-two" id = "location-board">
-            <h1 id="user-leaderboard-title">Signup location</h1>
-                    <button id="see-traffic">See all countries</button>
+                <h1 id="user-leaderboard-title">Signup location</h1>
+                        <button id="see-traffic">See all countries</button>
 
-                    <button
-                    className={isButton3Highlighted ? 'highlightedButton' : ''}
-                    id ="source-btn"
-                    onClick={highlightButton3}
-                    >Country</button>
+                        <button
+                        className={isButton3Highlighted ? 'highlightedButton' : ''}
+                        id ="source-btn"
+                        onClick={highlightButton3}
+                        >Country</button>
 
-                    <button
-                    className={isButton4Highlighted ? 'highlightedButton' : ''}
-                    id ="city-btn"
-                    onClick={highlightButton4}
-                    >City</button>    
-                
-                {isButton3Highlighted ? 
-                    <ul className="signup-list-users">
-                        {signup.map((location, index) => (
-                            <li key={index}>
-                                <div className="signup-bar">
-                                    <p id="signup-tags-one">
-                                        <span id ="signuptags-one">
-                                            <img src={location.flag} id="flag-img"></img>
-                                        </span>
-                                        {location.country}
-                                    </p>
-                                </div>
+                        <button
+                        className={isButton4Highlighted ? 'highlightedButton' : ''}
+                        id ="city-btn"
+                        onClick={highlightButton4}
+                        >City</button>    
+                    
+                    {isButton3Highlighted ? 
+                        <ul className="signup-list-users">
+                            {signup.map((location, index) => (
+                                <li key={index}>
+                                        <div className="signup-bar">
+                                            <p id={`signup-tags-${location.width}`} ><img src={location.flag} id="flag-img"></img>{location.country}</p>
+                                        </div>
+                                        <p id="signup-tags-two">{location.users}</p>
                                 
-                                <p id="signup-tags-two">{location.users}</p>
-                            </li>
-                        ))}
-                    </ul>
-                : <ul className="signup-list-users" >
-                        
-                        {signup.map((location, index) => (
-                            <li key={index} >
+                                </li>
+                            ))}
+                        </ul>
+                    : <ul className="signup-list-users">
+                    {signup.map((location, index) => (
+                        <li key={index}>
                                 <div className="signup-bar">
-                                    <p id="signup-tags-one">
-                                        <span id ="signuptags-one">
-                                            <img src={location.flag} id="flag-img"></img>
-                                        </span>
-                                        {location.city}
-                                    </p>
+                                    <p id={`signup-tags-${location.width}`} ><img src={location.flag} id="flag-img"></img>{location.city}</p>
                                 </div>
-                                <p id="traffic-tags-two">{location.users}</p>
-                            </li>
+                                <p id="signup-tags-two">{location.users}</p>
+                        
+                        </li>
                         ))}
                     </ul>}
 
             
             </div>
 
-            {/* Behaviours Location */}
+
+
             <div className = "small-container-two" id = "location-board">
-            <h1 id="user-leaderboard-title">Behaviour</h1>
-                    <button id="see-traffic">See all countries</button>
+                <h1 id="user-leaderboard-title">Behaviour</h1>
+                        <button id="see-traffic">See all countries</button>
 
-                    <button
-                    className={isButton5Highlighted ? 'highlightedButton' : ''}
-                    id ="source-btn"
-                    onClick={highlightButton5}
-                    >Browser</button>
+                        <button
+                        className={isButton5Highlighted ? 'highlightedButton' : ''}
+                        id ="source-btn"
+                        onClick={highlightButton5}
+                        >Browser</button>
 
-                    <button
-                    className={isButton6Highlighted ? 'highlightedButton' : ''}
-                    id ="city-btn"
-                    onClick={highlightButton6}
-                    >Decides</button>    
-                
-                {isButton5Highlighted ? 
-                    <ul className="signup-list-users">
-                        {signup.map((location, index) => (
-                            <li key={index}>
-                                <div className="signup-bar">
-                                    <p id="signup-tags-one">{location.country}</p>
-                                </div>
+                        <button
+                        className={isButton6Highlighted ? 'highlightedButton' : ''}
+                        id ="city-btn"
+                        onClick={highlightButton6}
+                        >Decides</button>    
+                    
+                    {isButton5Highlighted ? 
+                        <ul className="signup-list-users">
+                            {signup.map((location, index) => (
+                                <li key={index}>
+                                        <div className="signup-bar">
+                                            <p id={`signup-tags-${location.width}`} >{location.country}</p>
+                                        </div>
+                                        <p id="signup-tags-two">{location.users}</p>
                                 
-                                <p id="signup-tags-two">{location.users}</p>
-                            </li>
-                        ))}
-                    </ul>
-                : <ul className="signup-list-users" >
-                        
-                        {signup.map((location, index) => (
-                            <li key={index} >
+                                </li>
+                            ))}
+                        </ul>
+                    : <ul className="signup-list-users">
+                    {signup.map((location, index) => (
+                        <li key={index}>
                                 <div className="signup-bar">
-                                    <p id="traffic-tags-one">{location.city}</p>
+                                    <p id={`signup-tags-${location.width}`} >{location.city}</p>
+                                    
                                 </div>
-                                <p id="traffic-tags-two">{location.users}</p>
-                            </li>
+                                <p id="signup-tags-two">{location.users}</p>
+                        
+                        </li>
                         ))}
                     </ul>}
 
-            
-            </div>
+                
+                </div>
         </div>
     )
 }
