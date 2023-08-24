@@ -1,0 +1,35 @@
+
+
+
+.container{
+    font-family: 'Karla', sans-serif;
+    margin-top:50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-right:10%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 6px 4px 9px 2px rgb(200, 200, 200); 
+}
+
+.title{
+    margin:0;
+    padding-left:40px;
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+
+#navbar{
+    font-family: 'Karla', sans-serif;
+    display: block;
+
+}
+#website-title{
+    margin-top:50px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+

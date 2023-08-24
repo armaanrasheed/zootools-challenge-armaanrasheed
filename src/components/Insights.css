@@ -1,0 +1,95 @@
+
+#insights{
+    height: fit-content;
+    padding-bottom: 30px;
+    max-width:100%;
+    display: flex;
+    flex-direction:column;
+    min-height:fit-content;
+}
+.insight-main-container{
+    display: flex;
+
+    min-width: fit-content;
+    
+}
+
+@media (max-width: 1200px) {
+    .insight-main-container {
+        flex-direction: column; /* Change to column layout when screen width is 600px or less */
+    }
+}
+
+
+.insight-container{
+ 
+    margin-right:5%;
+    /* border:2px solid black; */
+}
+
+.recommendation-container{
+    /* border:2px solid black; */
+    margin-right:-10%;
+
+}
+#promote-text{
+    font-size: 16px;
+    margin-left: 40px;
+    margin-bottom:40px;
+
+    /* border:2px solid black; */
+}
+
+#cta{
+    font-size: 20px;
+    padding-left: 40px;
+    margin:0;
+    padding-top:10px;
+   
+}
+
+
+.reccomendation-container{
+    position:relative;
+    width:600px;
+    margin-left:60%;
+    margin-top:-30%;
+    font-size: small;
+}
+
+#summary-title{
+    font-size: 25px;
+    padding-left: 40px;
+    margin:0;
+    padding-top:35px;
+}
+#recommendation-title{
+    font-size: 25px;
+    margin:0;
+    padding-top:35px;
+}
+
+.insight-item{
+    list-style: none;
+}
+
+.insight-line{
+    margin-bottom:5%;
+}
+
+#insight-img-one{
+    height:40px;
+    width:40px;
+    position:absolute;
+}
+#insight-text-one{
+    padding-left: 50px;
+    margin:0;
+    padding-top:10px;
+
+}
+
+
+
+
+
