@@ -132,7 +132,6 @@ export default function Metrics() {
                 <h1 className="title" id="metrics-title">
                     100,000
                 </h1>
-                <img src="./two-people.png" id="people-icon" alt="People Icon" />
             </div>
             <div className="title" id="participants-title">
                 Participants
