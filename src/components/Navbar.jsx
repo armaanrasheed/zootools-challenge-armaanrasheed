@@ -1,6 +1,7 @@
 import React from 'react'
 import './globalComponents.css'
 import './Navbar.css'
+import { useState } from 'react'
 
 
 export default function Navbar(){
@@ -33,7 +34,7 @@ export default function Navbar(){
         setIsButton3Highlighted(false);
         setIsButton4Highlighted(true);
     }
-
+    
     return (
         <navbar id="navbar">
 
@@ -42,10 +43,10 @@ export default function Navbar(){
                 <h1 id="website-title">Summer referral competition</h1>
 
                 <div id="nav-container">
-                    <button className = "nav-button" id="nav-button1" onClick={highlightButton1}>1h</button>
-                    <button className = "nav-button" id="nav-button2" onClick={highlightButton2}>24h</button>
-                    <button className = "nav-button" id="nav-button3" onClick={highlightButton3}>30d</button>
-                    <button className = "nav-button" id="nav-button4" onClick={highlightButton4}>60d</button>
+                    <button className={isButton1Highlighted ? 'highlightedButton' : ''} id="nav-button1" onClick={highlightButton1}>1h</button>
+                    <button className={isButton2Highlighted ? 'highlightedButton' : ''} id="nav-button2" onClick={highlightButton2}>24h</button>
+                    <button className={isButton3Highlighted ? 'highlightedButton' : ''} id="nav-button3" onClick={highlightButton3}>30d</button>
+                    <button className={isButton4Highlighted ? 'highlightedButton' : ''} id="nav-button4" onClick={highlightButton4}>60d</button>
                 </div>
             </span>
 

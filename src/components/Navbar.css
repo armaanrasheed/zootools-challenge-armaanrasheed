@@ -10,7 +10,46 @@
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);   
 }
 
-.nav-button{
+#nav-button1{
+    width:50px;
+    height:28px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color:rgb(102, 102, 102);
+    margin-right:10px;
+    font-size: large;
+    cursor: pointer;
+}
+#nav-button2{
+    width:50px;
+    height:28px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color:rgb(102, 102, 102);
+    margin-right:10px;
+    font-size: large;
+    cursor: pointer;
+}
+#nav-button3{
+    width:50px;
+    height:28px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color:rgb(102, 102, 102);
+    margin-right:10px;
+    font-size: large;
+    cursor: pointer;
+}
+#nav-button4{
     width:50px;
     height:28px;
     border-radius: 8px;
@@ -25,5 +64,5 @@
 }
 
 .highlightedButton{
-    background-color: rgb(242, 242, 242) !important;
+    background-color: rgba(0, 0, 0,20) !important;
 }
