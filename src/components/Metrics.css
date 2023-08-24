@@ -1,0 +1,50 @@
+#metrics{
+    min-height: fit-content;
+    padding-bottom:25px;
+    max-height: fit-content;
+    min-width: fit-content;
+}
+
+#top-metrics-section{
+    display: flex;
+}
+
+#metrics-title{
+   padding-left:40px;
+   display:block;
+   max-width: 200px;
+   
+}
+
+#people-icon{
+    width:30px;
+    height:30px;
+    padding-top:50px;
+    padding-left:10px;
+}
+
+#participants-title{
+    font-size: 27px;
+    margin-top:-40px;
+}
+
+
+
+
+#metrics-audience{
+    padding-top:80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    
+}
+
+
+
+.chart-pos{
+    min-height:350px;
+    margin-left:15%;
+    
+}
+
+
