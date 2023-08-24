@@ -5,6 +5,7 @@ import './globalComponents.css';
 import './Metrics.css';
 import Chart from 'chart.js/auto';
 
+
 export default function Metrics() {
 
     useEffect(() => {
@@ -127,39 +128,11 @@ export default function Metrics() {
     return (
         <div className="container" id="metrics">
             <div id="top-metrics-section">
-                <button
-                    className={isButton1Highlighted ? 'highlightedButton' : ''}
-                    onClick={highlightButton1}
-                    id="source-btn"
-                >
-                    1h
-                </button>
-                <button
-                    className={isButton2Highlighted ? 'highlightedButton' : ''}
-                    onClick={highlightButton2}
-                    id="source-btn"
-                >
-                    2h
-                </button>
-                <button
-                    className={isButton3Highlighted ? 'highlightedButton' : ''}
-                    onClick={highlightButton3}
-                    id="source-btn"
-                >
-                    3h
-                </button>
-                <button
-                    className={isButton4Highlighted ? 'highlightedButton' : ''}
-                    onClick={highlightButton4}
-                    id="source-btn"
-                >
-                    4h
-                </button>
 
                 <h1 className="title" id="metrics-title">
                     100,000
                 </h1>
-                <img src="./public/images/two-people.png" id="people-icon" alt="People Icon" />
+                <img src="./two-people.png" id="people-icon" alt="People Icon" />
             </div>
             <div className="title" id="participants-title">
                 Participants
